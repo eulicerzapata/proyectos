@@ -1,4 +1,4 @@
-const { Schema, model} = require('mongoose')
+const {Schema, model} = require('mongoose')
 
 const ProyectoSchema = Schema({
     numero: {
@@ -13,33 +13,22 @@ const ProyectoSchema = Schema({
     fechaInicio: {
         type: Date,
         required: [true, 'fecha requerida'],
-        validate: {
-            validator: function(v) {
-              return /^\d{4}-\d{2}-\d{2}$/.test(v);
-            },
-            message: 'fecha debe tener el formato YYYY-MM-DD'
-          }
     },
     fechaEntrega: {
-        type: Date,
-        required: [true, 'fecha requerida'],
-        validate: {
-          validator: function(v) {
-            return /^\d{4}-\d{2}-\d{2}$/.test(v);
-          },
-          message: 'fecha debe tener el formato YYYY-MM-DD'
-        }
+      type: Date,
+      required: [true, 'fecha requerida'],
       },
-    valor: {
+      valor: {
         type: Number,
         required: [true, 'valor requerido'],
         validate: {
-          validator: function(v) {
-            return Number.isInteger(v) && v > 0;
-          },
-          message: 'valor debe ser un entero positivo'
+            validator: function(v) {
+              return v >= 0;
+            },
+          message: 'El valor debe ser un número entero positivo'
         }
-      },
+       },
+       
      
       fechaCreacion: {
         type: Date,

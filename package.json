@@ -1,12 +1,12 @@
 {
   "name": "backend-inventarios-gr1",
   "version": "1.0.0",
-  "description": "API REST Inventarios",
+  "description": "API REST proyectos",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "IUDigital",
+  "author": "EULICER",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

@@ -7,12 +7,14 @@ const TipoProyectoSchema = Schema({
     },
     fechaCreacion: {
         type: Date,
-        default: new Date()
+        default: new Date(),
+       
     },
     fechaActualizacion: {
         type: Date,
         default: new Date()
-    }
+    },
 })
+
 
 module.exports = model('TipoProyecto', TipoProyectoSchema)

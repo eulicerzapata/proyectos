@@ -1,16 +1,16 @@
 const { Router } = require('express')
-const {createTipoProyecto, /*getTipoEquipos, updateTipoEquipoByID*/} =
- require('../controllers/tipoEquipo')
+const {createTipoProyecto, getTipoProyecto,updateTipoProyectoByID} =
+ require('../controllers/tipoProyecto')
 
 const router = Router()
 
 // crear
 router.post('/', createTipoProyecto)
 
-// consultar todos
-//router.get('/', getTipoEquipos)
+// consultar 
+router.get('/', getTipoProyecto)
 
-// consultar todos
-//router.put('/:id', updateTipoEquipoByID)
+// editar por id.
+router.put('/:id', updateTipoProyectoByID)
 
 module.exports = router;
